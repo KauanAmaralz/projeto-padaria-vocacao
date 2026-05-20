@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff4df;
+    color: #3b230f;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+
+header {
+    height: 420px;
+    background: 
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("../img/frente.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.overlay h1 {
+    color: white;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.overlay p {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.btn-banner {
+    background: #d88932;
+    color: white;
+    padding: 14px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-banner:hover {
+    background: #b96f22;
+}
+
+/* MENU */
+
+nav {
+    background: #5c3517;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white; 
+    margin: 10px;
+    text-decoration:none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffd28a;
+}
+
+/* MAIN */
+
+main {
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 30px;
+}
+
+/* SEÇÕES */
+
+.secao {
+    background: white;
+    margin: 35px auto;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.secao h2 {
+    margin-bottom: 20px;
+    color: #8b4a1d;
+    font-size: 30px;
+}
+
+.secao p {
+    margin-bottom: 10px;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+/* CARDÁPIO */
+
+.cardapio {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.card {
+    background: #fff0d2;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #e6b36a;
+    text-align: center;
+    width: 260px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #5c3517;
+    font-size: 24px;
+}
+
+.linha {
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* IMAGENS */
+
+.img-paes,
+.img-card{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* BOTÕES */
+
+button {
+    background: #8b4a1d;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 6px 0 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #d88932;
+}
+
+/* INPUTS */
+
+select,
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px;
+    border-radius: 8px;
+    border: 1px solid #c98c4a;
+    font-size: 15px;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* CARRINHO */
+
+.carrinho {
+    position: fixed;
+    right: 20px;
+    top: 120px;
+    width: 270px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #d88932;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.carrinho h3 {
+    margin-bottom: 15px;
+}
+
+.item-carrinho {
+    background: #fff0d2;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.total {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* FOOTER */
+
+footer {
+    background: #5c3517;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+.footer-bottom p {
+    margin: 5px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 1100px) {
+
+    .carrinho {
+        position: static;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    main {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .overlay h1 {
+        font-size: 34px;
+    }
+
+    .overlay p {
+        font-size: 18px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .secao {
+        padding: 25px;
+    }
+}
+
+/* CONTATO */
+
+.contato-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    max-width: 2100px;
+    margin: auto;
+    padding: 50px 20px;
+
+    flex-wrap: wrap;
+}
+
+.info-contato {
+    flex: 1;
+    min-width: 280px;
+}
+
+.info-contato h2 {
+    margin-bottom: 20px;
+}
+
+.info-contato p {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.mapa iframe {
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
